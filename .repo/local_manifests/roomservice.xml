@@ -1,56 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <!--
-    roomservice.xml - Android 源码编译的本地仓库清单
-    此文件用于添加设备特定的仓库到 AOSP/ROM 源码树中
-    
-    放置位置: .repo/local_manifests/roomservice.xml
-    创建后执行: repo sync
-  -->
-  
-  <!-- OmniROM 核心配置仓库 (解决 vendor/omni/config/common.mk 缺失问题) -->
-  <project name="omnirom/vendor_omni" 
-           path="vendor/omni" 
-           remote="github" 
-           revision="android-12.1" />
-  
-  <!-- Redmi 9 (lime) 设备树仓库 (OmniROM 版本) -->
-  <project name="omnirom/android_device_xiaomi_lime" 
-           path="device/xiaomi/lime" 
-           remote="github" 
-           revision="android-12.1" />
-  
-  <!-- Redmi 9 (lime) 内核源码 -->
-  <project name="omnirom/android_kernel_xiaomi_mt6768" 
-           path="kernel/xiaomi/mt6768" 
-           remote="github" 
-           revision="android-12.1" />
-  
-  <!-- Xiaomi MT6768 平台 vendor 文件 -->
-  <project name="omnirom/android_vendor_xiaomi_mt6768-common" 
-           path="vendor/xiaomi/mt6768-common" 
-           remote="github" 
-           revision="android-12.1" />
-  
-  <!-- Redmi 9 (lime) 专用 vendor 文件 -->
-  <project name="omnirom/android_vendor_xiaomi_lime" 
-           path="vendor/xiaomi/lime" 
-           remote="github" 
-           revision="android-12.1" />
-  
-  <!--
-    可选: 如果需要其他仓库，可在此添加
-    格式:
-    <project name="组织名/仓库名" 
-             path="本地路径" 
-             remote="远程名称(通常为github)" 
-             revision="分支名" />
-  -->
-  
-  <!--
-    可用远程仓库定义 (通常已在 .repo/manifests/default.xml 中定义)
-    <remote name="github" 
-            fetch="https://github.com/" 
-            review="review.omnirom.org" />
-  -->
+  <project name="omnirom/android_vendor_omni" path="vendor/omni" remote="github" revision="android-12.1" />
+  <project name="omnirom/android_device_xiaomi_lime" path="device/xiaomi/lime" remote="github" revision="android-12.1" />
+  <project name="omnirom/android_kernel_xiaomi_lime" path="kernel/xiaomi/lime" remote="github" revision="android-12.1" />
+  <project name="omnirom/android_vendor_xiaomi_lime" path="vendor/xiaomi/lime" remote="github" revision="android-12.1" />
 </manifest>
